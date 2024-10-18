@@ -1,0 +1,31 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	AAA: {
+		DisplayName: Evil God's Tear
+		Tooltip:
+			'''
+			Tear Of A Long Fallen Evil God
+
+			Once Left Behind By An Evil God That Killed Many Others,
+			Weak But Some Of Their Power May Remain Inside.
+
+			Be Wary Of What May Happen After Using This
+
+			Can Only Be Used Once
+			'''
+	}
+
+	AAB: {
+		DisplayName: Goddess' Tear
+		Tooltip:
+			'''
+			Tear Of The Goddess That Weeped At The Site Of Her Family's Death
+			By The Hand Of The Evil God
+
+
+			(Good Things May Happen If Used After Being Cursed By The Evil God's Weapon)
+			(Consumable)
+			'''
+	}
+}
