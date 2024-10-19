@@ -31,7 +31,7 @@ namespace FirstMod1.Content.Items
             if (!elmoishere)
             {
                 Main.NewText("Damage Buff Is Active... However.....", 255, 36, 0);
-                player.GetModPlayer<MyModPlayer>().ElmoJumpy = 1;
+                // player.GetModPlayer<MyModPlayer>().ElmoJumpy = 1;
                 player.GetModPlayer<MyModPlayer>().damageBuffActive = true;
             }
 
@@ -55,16 +55,16 @@ namespace FirstMod1.Content.Items
 
     public class MyModPlayer : ModPlayer
     {
-        public int ElmoJumpy;
+        // public int ElmoJumpy;
         public int DropChanceTimer;
         public bool dropChanceDecreased;
 
-        public bool elmoMessageSent;
+        // public bool elmoMessageSent;
         public bool damageBuffActive;
         // Add a field to store the texture
         private Texture2D elmoTexture;
 
-        public override void Load()
+        /*public override void Load()
         {
             // Load the texture and handle potential errors
             try
@@ -79,21 +79,21 @@ namespace FirstMod1.Content.Items
                     elmoMessageSent = true;
                 }
             }
-        }
+        }*/
 
         public override void UpdateDead()
         {
-            ElmoJumpy = 0;
+            // ElmoJumpy = 0;
             DropChanceTimer = 0;
             dropChanceDecreased = false;
         }
 
         public override void PreUpdate()
         {
-            if (ElmoJumpy == 1)
-            {
-                // Logic to display the Elmo image goes here, handled in the PostUpdate method.
-            }
+            // if (ElmoJumpy == 1)
+            // {
+            //     // Logic to display the Elmo image goes here, handled in the PostUpdate method.
+            // }
 
             if (DropChanceTimer > 0)
             {
@@ -127,16 +127,16 @@ namespace FirstMod1.Content.Items
             }
         }
 
-        public override void PostUpdate()
-        {
-            if (ElmoJumpy == 1)
-            {
-                // Call the DrawElmo method to draw the image on the screen
-                DrawElmo(Main.spriteBatch);
-            }
-        }
+        // public override void PostUpdate()
+        // {
+        //     if (ElmoJumpy == 1)
+        //     {
+        //         // Call the DrawElmo method to draw the image on the screen
+        //         DrawElmo(Main.spriteBatch);
+        //     }
+        // }
 
-        private void DrawElmo(SpriteBatch spriteBatch)
+        /*private void DrawElmo(SpriteBatch spriteBatch)
         {
             // Check if the texture is loaded before drawing
             if (elmoTexture != null)
@@ -154,7 +154,7 @@ namespace FirstMod1.Content.Items
                     elmoMessageSent = true;
                 }
             }
-        }
+        }*/
         public override void ModifyWeaponDamage(Item item, ref StatModifier damage) {
             if (damageBuffActive)
             {
